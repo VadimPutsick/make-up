@@ -1,0 +1,25 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: rgb(66, 55, 55);
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+   background: url("background-images/bg1.jpg")no-repeat center fixed ; 
+
+   background-size: cover;
+  
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(61, 20, 49, 0.5);
+  z-index: 2;
+}
+.mu-index{
+ 
+}
