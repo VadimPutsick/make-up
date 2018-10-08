@@ -1,6 +1,4 @@
 echo off
 git add .
 git commit -m %1
-git push origin master
-echo trewyut@mail.ru
-echo tuywert97
+git push https://trewyut@mail.ru:tuywert97@github.com/VadimPutsick/make-up.git --all
