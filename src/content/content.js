@@ -1,17 +1,18 @@
 import React from 'react';
+
 import "./content.scss";
-import About from '../about/index';
-import Main from '../main/index';
+import {About} from '../components/about';
+import {Main} from '../components/main';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-export default class Content extends React.Component {
+export  class Content extends React.Component {
     render() {
         return (
             <div className="mu-content">
-                <Router>
-                    <Route  path="/" component={Main} />
-                    <Route path="/about" component={About} />
-                </Router>
+          
+                <Route path="/" component={Main} />
+                <Route path="/about" component={About} />
+
                 {/* Эволюция человеческой цивилизации имеет тенденцию к поглощению естественного искусственным.
     Это проявляется в создании множества опосредующих звеньев между естественными способностями и потребностям
      человека и искусственными формами их проявления и удовлетворения.
@@ -21,7 +22,7 @@ export default class Content extends React.Component {
  Такие системы способны к самообучению, к образованию условных рефлексов и даже к простейшим «умозаключениям», основанным на выявлении аналогий.
 Интеллект (по Пиаже Ж.) – высшая форма духовного приспособления к среде путем мгновенной организации стабильных пространственно-временных
 логических структур. */}
-      </div>
+            </div>
         );
     }
 }
