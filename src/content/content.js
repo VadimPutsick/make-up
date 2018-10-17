@@ -1,8 +1,8 @@
 import React from 'react';
 
 import "./content.scss";
-import {About} from '../components/about';
-import {Main} from '../components/main';
+import {About,Main,Contact,Prices,Services,Trainings } from '../components';
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export  class Content extends React.Component {
@@ -10,18 +10,13 @@ export  class Content extends React.Component {
         return (
             <div className="mu-content">
           
-                <Route path="/" component={Main} />
+                <Route exact  path="/" component={Main} />
                 <Route path="/about" component={About} />
-
-                {/* Эволюция человеческой цивилизации имеет тенденцию к поглощению естественного искусственным.
-    Это проявляется в создании множества опосредующих звеньев между естественными способностями и потребностям
-     человека и искусственными формами их проявления и удовлетворения.
-Так специалисты в области кибернетики сразу же указали на принципиальную возможность моделирования сознания,
-ак индивидуального, так и общественного, при помощи технических средств. Уже в середине 90-х годов была решена
-проблема моделирования нейронных систем, находящихся на уровне нервной системы головоногого моллюска (порядка 100 тысяч нейронов).
- Такие системы способны к самообучению, к образованию условных рефлексов и даже к простейшим «умозаключениям», основанным на выявлении аналогий.
-Интеллект (по Пиаже Ж.) – высшая форма духовного приспособления к среде путем мгновенной организации стабильных пространственно-временных
-логических структур. */}
+                <Route path="/contact" component={Contact} />
+                <Route path="/prices" component={Prices} />
+                <Route path="/services" component={Services} />
+                <Route path="/trainings" component={Trainings} />
+               
             </div>
         );
     }

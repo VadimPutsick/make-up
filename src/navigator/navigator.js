@@ -20,40 +20,44 @@ export class Navigator extends React.Component {
 
     render() {
         return (
-            <div>
-
+            <div>               
                 <Nav pills>
                     <NavItem>
                         <Link to="/">
-                            <NavLink>
-                                ГЛАВНАЯ
-                </NavLink>
+                            <NavLink>ГЛАВНАЯ</NavLink>
                         </Link>
                     </NavItem>
 
                     <NavItem>
-
                         <Link to="/about">
-
                             <NavLink >ОБО МНЕ</NavLink>
-
                         </Link>
                     </NavItem>
 
                     <NavItem>
-                        <NavLink href="#">УСЛУГИ</NavLink>
+                        <Link to="/services">
+                            <NavLink >УСЛУГИ</NavLink>
+                        </Link>
                     </NavItem>
 
                     <NavItem>
-                        <NavLink href="#">ОБУЧЕНИЕ</NavLink>
+                        <Link to="/trainings">
+                            <NavLink >ОБУЧЕНИЕ</NavLink>
+                        </Link>
+
                     </NavItem>
 
                     <NavItem>
-                        <NavLink href="#">ЦЕНЫ</NavLink>
+                        <Link to="/prices">
+                            <NavLink >ЦЕНЫ</NavLink>
+                        </Link>
                     </NavItem>
 
                     <NavItem>
-                        <NavLink href="#">КОНТАКТЫ</NavLink>
+                        <Link to="/contact">
+                            <NavLink >КОНТАКТЫ</NavLink>
+                        </Link>
+
                     </NavItem>
                 </Nav>
 

@@ -1,8 +1,24 @@
 export {
-    Navigator
+    About
 }
-    from './navigator';
+    from './about';
 export {
-    Content
+    Contact
 }
-    from './content';
+    from './contact';
+export {
+    Main
+}
+    from './main';
+export {
+    Prices
+}
+    from './prices';
+export {
+    Services
+}
+    from './services';
+export {
+    Trainings
+}
+    from './trainings';
