@@ -1,27 +1,14 @@
 $font-stack : Helvetica,
 sans-serif;
 $primary-color: rgb(252, 252, 252);
-$darker-color:rgba(63, 8, 51, 0.5);
-body {
-    // background: linear-gradient($darker-color,
-    // $darker-color),
-    //   url('background-images/bg1.jpg')
-    //    no-repeat center fixed ;
-    //    background-size: cover;
-}
+$bg-color:rgba(63, 8, 51, 0.5);
+$bg-img:'./img/background-images/bg1.jpg';
 
-// body::before {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background: rgba(61, 20, 49, 0.5);
-//    z-index: 1;
-// }
 .mu-index {
-    background: linear-gradient($darker-color, $darker-color), url('background-images/bg1.jpg') no-repeat center fixed;
+    color:$primary-color;
+    background: linear-gradient(
+        $bg-color, $bg-color), 
+    url($bg-img) no-repeat center fixed;
     background-size: cover;
     min-height: 100%; //  min-width: 1024px;
     /* Масштабирование*/
