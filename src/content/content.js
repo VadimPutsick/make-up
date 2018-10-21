@@ -3,7 +3,7 @@ import React from 'react';
 import "./content.scss";
 import {About,Main,Contact,Prices,Services,Trainings } from '../components';
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {  Route, Link } from "react-router-dom";
 
 export  class Content extends React.Component {
     render() {

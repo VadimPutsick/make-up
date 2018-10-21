@@ -1,6 +1,6 @@
 import React from 'react';
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
-import { Link } from "react-router-dom";
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu} from 'reactstrap';
+import { NavLink  } from "react-router-dom";
 
 export class Navigator extends React.Component {
     constructor(props) {
@@ -23,40 +23,40 @@ export class Navigator extends React.Component {
             <div>               
                 <Nav pills>
                     <NavItem>
-                        <Link to="/">
-                            <NavLink>ГЛАВНАЯ</NavLink>
-                        </Link>
+                        <NavLink exact  className="nav-link" to="/">
+                        ГЛАВНАЯ
+                        </NavLink >
                     </NavItem>
 
                     <NavItem>
-                        <Link to="/about">
-                            <NavLink >ОБО МНЕ</NavLink>
-                        </Link>
+                        <NavLink  className="nav-link" to="/about">
+                        ОБО МНЕ
+                        </NavLink >
                     </NavItem>
 
                     <NavItem>
-                        <Link to="/services">
-                            <NavLink >УСЛУГИ</NavLink>
-                        </Link>
+                        <NavLink  className="nav-link" to="/services">
+                        УСЛУГИ
+                        </NavLink >
                     </NavItem>
 
                     <NavItem>
-                        <Link to="/trainings">
-                            <NavLink >ОБУЧЕНИЕ</NavLink>
-                        </Link>
+                        <NavLink  className="nav-link" to="/trainings">
+                        ОБУЧЕНИЕ
+                        </NavLink >
 
                     </NavItem>
 
                     <NavItem>
-                        <Link to="/prices">
-                            <NavLink >ЦЕНЫ</NavLink>
-                        </Link>
+                        <NavLink  className="nav-link" to="/prices">
+                        ЦЕНЫ
+                        </NavLink >
                     </NavItem>
 
                     <NavItem>
-                        <Link to="/contact">
-                            <NavLink >КОНТАКТЫ</NavLink>
-                        </Link>
+                        <NavLink  className="nav-link" to="/contact">
+                        КОНТАКТЫ
+                        </NavLink >
 
                     </NavItem>
                 </Nav>
