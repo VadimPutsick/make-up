@@ -1,5 +1,6 @@
 import React from 'react';
-import "./main.scss";
+import './main.scss';
+import { News } from '../news';
 const mainImgPath = 'https://sun9-5.userapi.com/c845416/v845416782/80bf0/ahCDG7DC2k8.jpg';
 const img2 = '../../img/background-images/bg1.jpg';
 
@@ -8,7 +9,6 @@ export class Main extends React.Component {
     render() {
         return (
             <div className="container">
-
 
                 <div className="row ">
                     <img src={mainImgPath} className='img-fluid' />
@@ -23,6 +23,12 @@ export class Main extends React.Component {
                         Исходя из ваших желаний и модных тенденций мы вместе создадим незабываемый образ!
                     </p>
                 </div>
+            <div className="row">
+            <News />
+            </div>
+                    
+                
+
 
 
 

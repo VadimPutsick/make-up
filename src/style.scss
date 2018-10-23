@@ -1,7 +1,7 @@
 $font-stack : Helvetica,
 sans-serif;
 $primary-color: rgb(252, 252, 252);
-$bg-color:rgba(63, 8, 51, 0.5);
+$bg-color:rgba(0, 0, 0, 0.596);
 $bg-img:'./img/background-images/bg1.jpg';
 
 .mu-index {
@@ -10,17 +10,6 @@ $bg-img:'./img/background-images/bg1.jpg';
         $bg-color, $bg-color), 
     url($bg-img) no-repeat center fixed;
     background-size: cover;
-    min-height: 100%; //  min-width: 1024px;
-    /* Масштабирование*/
-    width: 100%;
-    height: auto;
-    /* Позиционирование */
-    position: fixed; //  top: 0;left: 0;
-}
-
-.mu-context {
-    height: 80vw;
-    width: 80vh;
-    background-color: white;
-    z-index: 5;
+    height: 100%;
+    min-height: 100vh;
 }

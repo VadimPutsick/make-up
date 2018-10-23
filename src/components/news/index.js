@@ -1,0 +1,4 @@
+export {
+  News
+  }
+    from './news';
