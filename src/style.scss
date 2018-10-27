@@ -1,11 +1,18 @@
 $font-stack : Helvetica,
 sans-serif;
-$primary-color: rgb(252, 252, 252);
+
+$body-color: rgb(252, 252, 252);
 $bg-color:rgba(0, 0, 0, 0.596);
 $bg-img:'./img/background-images/bg1.jpg';
 
+
+// // Bootstrap and its default variables
+// $body-bg: #000;
+// $body-color: #111;
+
+ @import "../node_modules/bootstrap/scss/bootstrap";
 .mu-index {
-    color:$primary-color;
+    // color:$primary-color;
     background: linear-gradient(
         $bg-color, $bg-color), 
     url($bg-img) no-repeat center fixed;
