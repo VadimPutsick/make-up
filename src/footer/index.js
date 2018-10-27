@@ -1,4 +1,4 @@
 export {
-    Content
+  Footer
   }
-    from './content';
+    from './footer';

@@ -16,7 +16,7 @@ export class Main extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <News className="mu-news" cardType={PLAIN_CARD} />
+                        <News className="mu-news_plain" cardType={PLAIN_CARD} />
                     </div>
                     <div className="col">
                         <p>

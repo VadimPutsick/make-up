@@ -1,24 +1,27 @@
 import React from 'react';
+import 'instafeed.js';
+// import 'https://vk.com/js/api/openapi.js?159';
 
-import "./content.css";
-import {About,Main,Contact,Prices,Services,Trainings,ServicesFreeLessons,ServicesMakeUp,ServicesMerriage } from '../components';
 
-import {  Route, Link } from "react-router-dom";
-
-export  class Content extends React.Component {
+export class Footer extends React.Component {
+    componentDidMount() {
+        VK.Widgets.Group("vk_groups", { mode: 3 }, 55579723);
+        // var feed = new Instafeed({
+        //     get: 'tagged',
+        //     tagName: 'awesome',
+        //     clientId: 'YOUR_CLIENT_ID'
+        // });
+        // feed.run();
+    }
     render() {
         return (
-            <div className="mu-content">          
-                <Route exact  path="/" component={Main} />
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
-                <Route path="/prices" component={Prices} />
-                <Route path="/services" component={Services} />
-                <Route path="/trainings" component={Trainings} />
-                <Route path="/services-free-lessons" component={ServicesFreeLessons} />
-                <Route path="/services-makeUp" component={ServicesMakeUp} />
-                <Route path="/services-merriage" component={ServicesMerriage} />
+            <div>
+                <h1>Присоеденяйтесь</h1>
+                <div id="vk_groups"></div>
+                <div id="instafeed"></div>
             </div>
-        );
+        )
+
     }
+
 }

@@ -9,7 +9,7 @@ background-size: cover;
 .img-fluid{
    width: 100%;
 }
-.mu-news{
+.mu-news_plain{
     overflow-y: scroll;
-    height:200px;
+    height:200px ;
 }
