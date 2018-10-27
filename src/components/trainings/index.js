@@ -1,0 +1,4 @@
+export {
+  Trainings
+  }
+    from './trainings';
