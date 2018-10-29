@@ -1,12 +1,11 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
-const htmlPlugin = new HtmlWebPackPlugin({
-    template: "./public/index.html",
-    filename: "./index.html"
-});
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
-    entry: './src/index.js',
-    mode: 'development',
+    entry: {
+        app: './src/index.js'
+    },
     module: {
         rules: [
             {
@@ -25,7 +24,7 @@ module.exports = {
                 use: [
                     "style-loader", // creates style nodes from JS strings
                     "css-loader" // translates CSS into CommonJS
-                   // ,"sass-loader" // compiles Sass to CSS, using Node Sass by default
+                    // ,"sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
             },
             {
@@ -39,11 +38,15 @@ module.exports = {
             }
         ]
     },
-    devtool: 'inline-source-map',
-    plugins: [htmlPlugin],
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            template: "./public/index.html",
+            filename: "./index.html"
+        }),
+    ],
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        path: path.resolve(__dirname, 'dist')
     }
 };

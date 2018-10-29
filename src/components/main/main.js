@@ -15,8 +15,8 @@ export class Main extends React.Component {
                     <img src={mainImgPath} className='img-fluid' />
                 </div>
                 <div className="row">
-                    <div className="col">
-                        <News className="mu-news_plain" cardType={PLAIN_CARD} />
+                    <div className="col mu-news_plain">
+                        <News  cardType={PLAIN_CARD} />
                     </div>
                     <div className="col">
                         <p>

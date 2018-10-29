@@ -6,7 +6,7 @@ import { Button, Tooltip, TooltipContent } from 'reactstrap';
 import {Content} from './content';
 import {Navigator} from "./navigator";
 import {Footer} from './footer';
-import {HashRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 class Index extends React.Component {
   render() {
