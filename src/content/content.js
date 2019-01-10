@@ -2,6 +2,7 @@ import React from 'react';
 
 import "./content.css";
 import {About,Main,Contact,Prices,Services,Trainings,ServicesFreeLessons,ServicesMakeUp,ServicesMerriage } from '../components';
+import {Admin} from '../admin';
 
 import {  Route, Link } from "react-router-dom";
 
@@ -17,7 +18,7 @@ export  class Content extends React.Component {
                 <Route path="/trainings" component={Trainings} />
                 <Route path="/services-free-lessons" component={ServicesFreeLessons} />
                 <Route path="/services-makeUp" component={ServicesMakeUp} />
-                <Route path="/services-merriage" component={ServicesMerriage} />
+                <Route path="/admin" component={Admin} />
             </div>
         );
     }

@@ -1,3 +1,3 @@
 export const PLAIN_CARD = 'PLAIN_CARD';
-export const IMG_DOWNN = 'IMG_DOWNN';
-export const IMG_BACKGOUND = 'IMG_BACKGOUND';
+export const IMG_DOWN = 'IMG_DOWN';
+export const IMG_BACKGROUND = 'IMG_BACKGROUND';

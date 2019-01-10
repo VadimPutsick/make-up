@@ -1,9 +1,11 @@
 import React from 'react';
 import "./news.css";
-import { PLAIN_CARD, IMG_DOWNN, IMG_BACKGOUND } from '../../utils/card/cardType';
+import {PLAIN_CARD, IMG_DOWN, IMG_BACKGROUND} from '../../utils/card/cardType';
+
 const mainImgPath = 'https://sun9-5.userapi.com/c845416/v845416782/80bf0/ahCDG7DC2k8.jpg';
 let newsList = [
     {
+        id: 1,
         title: `Halloween makeup 😈`,
         date: `27.10.2018`,
         text: `23 октября в 14.00 по адресу ул. Ленинская 23а пройдёт мой Мастер-класс на тему "Halloween makeup" 😈
@@ -11,6 +13,7 @@ let newsList = [
         imagePath: 'https://pp.userapi.com/c850124/v850124946/4d687/qkxQKfoiCsw.jpg'
     },
     {
+        id: 2,
         title: `Собирали на фотосесс,ию Unreal @viktoryia.raynes `,
         date: `27.10.2018`,
         text: `Собирали на фотосессию Unreal @viktoryia.raynes 😍 мой макияж для красотки Вики, 
@@ -19,6 +22,7 @@ let newsList = [
         imagePath: 'https://pp.userapi.com/c844321/v844321794/108523/3YpzBi8kUac.jpg'
     },
     {
+        id: 3,
         title: `Halloween makeup 😈`,
         date: `27.10.2018`,
         text: `23 октября в 14.00 по адресу ул. Ленинская 23а пройдёт мой Мастер-класс на тему "Halloween makeup" 😈
@@ -26,6 +30,7 @@ let newsList = [
         imagePath: 'https://pp.userapi.com/c850124/v850124946/4d687/qkxQKfoiCsw.jpg'
     },
     {
+        id: 4,
         title: `Halloween makeup 😈`,
         date: `27.10.2018`,
         text: `23 октября в 14.00 по адресу ул. Ленинская 23а пройдёт мой Мастер-класс на тему "Halloween makeup" 😈
@@ -37,9 +42,9 @@ let newsList = [
 function NewsItem(props) {
     const item = props.item;
     console.log(props);
-    if (props.type == IMG_DOWNN) {
+    if (props.type === IMG_DOWN) {
         return (
-            <div className="card mu-news__item" >
+            <div className="card mu-news__item">
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
 
@@ -47,14 +52,12 @@ function NewsItem(props) {
                         {item.text}
                     </p>
                 </div>
-                <img className="card-img-top" src={item.imagePath} alt="Card image cap" />
+                <img className="card-img-top" src={item.imagePath} alt="Card image cap"/>
             </div>
         );
-    }
-
-    else if (props.type == PLAIN_CARD) {
+    } else if (props.type === PLAIN_CARD) {
         return (
-            <div className="card mu-news__item" >
+            <div className="card mu-news__item">
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
                     <p className="card-text">
@@ -64,10 +67,9 @@ function NewsItem(props) {
 
             </div>
         );
-    }
-    else {
+    } else {
         return (
-            <div className="card mu-news__item" >
+            <div className="card mu-news__item">
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
 
@@ -75,11 +77,12 @@ function NewsItem(props) {
                         lala
                     </p>
                 </div>
-                <img className="card-img-top" src={item.imagePath} alt="Card image cap" />
+                <img className="card-img-top" src={item.imagePath} alt="Card image cap"/>
             </div>
         );
     }
 }
+
 export class News extends React.Component {
 
     render() {
@@ -89,14 +92,13 @@ export class News extends React.Component {
                 {
                     newsList.map(
                         (item, index) =>
-                            <NewsItem type={this.props.cardType} item={item} key={index} />
-
+                            <NewsItem type={this.props.cardType} item={item} key={index}/>
                     )
                 }
-{
-    console.log(this.props)
-}
-            </div >
+                {
+                    console.log(this.props)
+                }
+            </div>
 
         )
     }

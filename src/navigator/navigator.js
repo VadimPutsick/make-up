@@ -79,7 +79,12 @@ export class Navigator extends React.Component {
                         <NavLink className="nav-link" to="/contact">
                             КОНТАКТЫ
                         </NavLink >
+                    </NavItem>
 
+                    <NavItem>
+                        <NavLink className="nav-link" to="/admin">
+                            АДМИНИСТРИРОВАНИЕ
+                        </NavLink >
                     </NavItem>
                 </Nav>
 

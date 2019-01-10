@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document express </title>
+    <style>
+        a {
+            display: block;
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            border: solid white 1px;
+        }
+    </style>
+</head>
+
+<body>
+    this is admin panel<br><br>
+    <div class="ref">
+        <a href="data">to data</a>
+        <a href="about">about</a>
+        <a href="table/second">table</a>
+    </div>
+
+    <h1>Answer:</h1>
+    <div id="answer"></div>
+
+    <script>
+        // var xhttp = new XMLHttpRequest();
+        var refs = document.querySelector(".ref");
+        refs.addEventListener("click", referenceEvent);
+
+        function referenceEvent(e) {
+            httpGet(e.target.getAttribute("data"));
+        }
+
+        function httpGet(url) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        let answer = document.getElementById("answer");
+                         answer.innerHTML = JSON.parse(xhr.response)[0].title;
+                        
+                    }                   
+                }
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

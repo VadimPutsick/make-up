@@ -6,7 +6,9 @@ const mainImgPath = 'https://sun9-5.userapi.com/c845416/v845416782/80bf0/ahCDG7D
 const img2 = '../../img/background-images/bg1.jpg';
 
 export class Main extends React.Component {
-
+componentDidMount(){
+   var a = " asdasd ".trim(); 
+}
     render() {
         return (
             <div className="container">
