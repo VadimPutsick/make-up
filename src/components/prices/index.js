@@ -1,4 +1,1 @@
-export {
-  Prices
-  }
-    from './prices';
+export {Prices}    from './prices';

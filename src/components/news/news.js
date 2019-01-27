@@ -1,9 +1,9 @@
 import React from 'react';
 import "./news.css";
-import {PLAIN_CARD, IMG_DOWN, IMG_BACKGROUND} from '../../utils/card/cardType';
+import {PLAIN_CARD, IMG_DOWN} from '../../utils/card/cardType';
 
 const mainImgPath = 'https://sun9-5.userapi.com/c845416/v845416782/80bf0/ahCDG7DC2k8.jpg';
-let newsList = [
+const newsList = [
     {
         id: 1,
         title: `Halloween makeup 😈`,
@@ -40,67 +40,37 @@ let newsList = [
 ];
 
 function NewsItem(props) {
-    const item = props.item;
+    let footer;
     console.log(props);
     if (props.type === IMG_DOWN) {
-        return (
-            <div className="card mu-news__item">
-                <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
-
-                    <p className="card-text">
-                        {item.text}
-                    </p>
-                </div>
-                <img className="card-img-top" src={item.imagePath} alt="Card image cap"/>
-            </div>
-        );
-    } else if (props.type === PLAIN_CARD) {
-        return (
-            <div className="card mu-news__item">
-                <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">
-                        {item.text.slice(0, 50)}
-                    </p>
-                </div>
-
-            </div>
-        );
-    } else {
-        return (
-            <div className="card mu-news__item">
-                <div className="card-body">
-                    <h5 className="card-title">{item.title}</h5>
-
-                    <p className="card-text">
-                        lala
-                    </p>
-                </div>
-                <img className="card-img-top" src={item.imagePath} alt="Card image cap"/>
-            </div>
-        );
+        footer = <img className="card-img-top" src={props.item.imagePath} alt="Card image cap"/>;
     }
+    return (
+        <div className="card mu-news__item">
+            <div className="card-body">
+                <h5 className="card-title">{props.item.title}</h5>
+                <p className="card-text">
+                    {props.item.text}
+                </p>
+            </div>
+            {footer}
+        </div>
+    );
 }
+
 
 export class News extends React.Component {
 
     render() {
-        // console.log(props);
         return (
             <div className="mu-news">
                 {
-                    newsList.map(
-                        (item, index) =>
-                            <NewsItem type={this.props.cardType} item={item} key={index}/>
+                    newsList.map((item, index) =>
+                        <NewsItem type={this.props.cardType} item={item} key={index}/>
                     )
                 }
-                {
-                    console.log(this.props)
-                }
             </div>
-
-        )
+        );
     }
 }
 

@@ -1,4 +1,1 @@
-export {
-  CrudBlock
-  }
-    from './crud-block';
+export { CrudBlock } from './crud-block';

@@ -21,7 +21,7 @@ let promise = new Promise((resolve) => {
     });
 });
 // promise.then(
-//     response => {        
+//     response => {
 //         // let news = JSON.parse(response);
 //         console.log("adewfef = "+response[0].id);
 //     }

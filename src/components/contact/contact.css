@@ -1,0 +1,45 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.map {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-networks a {
+    margin-right: 20px;
+    display: inline-block;
+    width: 30px;
+    padding: 4px 0;
+    text-align: center;
+    vertical-align: center;
+    background-color: black;
+    cursor: pointer;
+
+}
+
+.social-networks i {
+    color: white;
+    font-size: 20px;
+}
+
+.contact {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-information {
+
+}

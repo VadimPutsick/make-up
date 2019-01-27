@@ -1,4 +1,1 @@
-export {
-    Content
-  }
-    from './content';
+export {Content} from './content';

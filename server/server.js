@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
+const hostname = '127.0.0.1';
 const app = express();
 const getData = require('./db').getData;
 
@@ -18,11 +19,11 @@ app
     .get('/data', function (req, res) {
         getData.then(
             response => {
-            res.send(response);   
+            res.send(response);
                 // // let news = JSON.parse(response);
-                // console.log("adewfef = " + response[0].id);
+                console.log("adewfef = " + response[0].id);
             }
         );
         
     })
-    .listen(PORT, () => console.log(`Listening on ${PORT}`))
+    .listen(PORT, hostname, () => console.log(`Listening on ${PORT}`));

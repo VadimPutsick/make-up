@@ -1,4 +1,1 @@
-export {
-  ServicesMakeUp
-  }
-    from './services-make-up';
+export {ServicesMakeUp}    from './services-make-up';

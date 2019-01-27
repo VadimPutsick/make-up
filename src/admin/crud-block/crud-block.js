@@ -1,5 +1,5 @@
 import React from 'react';
-import "./crud-block.css";
+import './crud-block.css';
 import { Button } from 'reactstrap';
 
 
@@ -13,7 +13,7 @@ export class CrudBlock extends React.Component {
                 <Button color="danger">Удалить</Button>
             </div>
 
-        )
+        );
     }
 }
 

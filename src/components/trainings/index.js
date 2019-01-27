@@ -1,4 +1,1 @@
-export {
-  Trainings
-  }
-    from './trainings';
+export {Trainings} from './trainings';

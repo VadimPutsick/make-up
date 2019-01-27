@@ -1,4 +1,1 @@
-export {
-  ServicesFreeLessons
-}
-  from './services-free-lessons';
+export {ServicesFreeLessons}  from './services-free-lessons';
