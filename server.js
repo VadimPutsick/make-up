@@ -12,16 +12,7 @@ const app = express();
 // .use(webpackDevMiddleware(compiler, {
 //   publicPath: config.output.publicPath
 // }))
-var pgp = require("pg-promise")(/*options*/);
-var db = pgp("postgres://postgres:123456789@host:5432/postgres");
 
-db.one("SELECT $1 AS value", 123)
-    .then(function (data) {
-        console.log("DATA:", data.value);
-    })
-    .catch(function (error) {
-        console.log("ERROR:", error);
-    });
 app
     .use(express.static(path.join(__dirname, 'dist')))
     // .set('dist', './dist')
@@ -29,8 +20,11 @@ app
     // .get('/',function (req, res) {
     //    res.render('index')
     // })
+    .get('/', function (req, res) {
+        res.send('sdf');
+    })
     .get('/table', function (req, res) {
-        res.send('about');
+        res.send('table');
     })
     .get('/about', function (req, res) {
         res.send('about');
