@@ -1,0 +1,27 @@
+{
+  "name": "make-up",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "node-json-db": "^1.0.1"
+  },
+  "engines": {
+    "npm": "6.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadimPutsick/make-up.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VadimPutsick/make-up/issues"
+  },
+  "homepage": "https://github.com/VadimPutsick/make-up#readme"
+}
